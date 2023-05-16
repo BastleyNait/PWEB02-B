@@ -2,26 +2,24 @@
 <html>
 <body>
 
-<p id = "texto">hola mundo</p>
-<button onclick = 'invertir()'>Invierteme!</button> 
+<p id="texto">hola mundo</p>
+<button onclick='invertir()'>Inviérteme!</button> 
 
 <p id="demo"></p>
 
 <script>
-const texto = document.querySelector("#texto");
+const texto = document.querySelector("#texto").textContent;
 
-function invertir () {
+function invertir() {
     let txt = "";
-    let contador = string.length - 1;
-    while(contador >= 0) {
-        txt += string[contador];
+    let contador = texto.length - 1;
+    while (contador >= 0) {
+        txt += texto[contador];
         contador--;
     }
-    return txt;
+    document.querySelector("#demo").innerHTML = txt;
 }
-
 </script>
 
 </body>
 </html>
-

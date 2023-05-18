@@ -8,18 +8,18 @@
 </head>
 <body>
     <div class="diaDeArequipa">
-        <h1 id = "dias">¿cuantos dias faltan para el aniversario de Arequipa?</h1>
+        <h1 id = "dias">¿Cuantos dias faltan para el aniversario de Arequipa?</h1>
         <button onclick="diasFaltantes()">Averigualo</button>
         <h1><div id="diasRestantes"></div></h1>
     </div>
 </body>
 <script>
     const diasFaltantes = () => {
-        const fechaActual = new Date();
-        const diaDeArequipa = new Date(2023,07,15);
-        const diferencia = diaDeArequipa - fechaActual;
+        let fechaActual = new Date();
+        let diaDeArequipa = new Date(2023,07,15);
+        let diferencia = diaDeArequipa - fechaActual;
         //ahora la resta nos saldrá un en milisegundos por lo cual se divide entre 1000 para formar un segundo entre 60 para formar un minuto, nuevamente entre 60 para formar una hora y finalmente entre 24 para formar un dia
-        const diasRestantes = Math.floor(diferencia/(1000*60*60*24));
+        let diasRestantes = Math.floor(diferencia/(1000*60*60*24));
         document.getElementById("diasRestantes").innerHTML = diasRestantes;
     }
     

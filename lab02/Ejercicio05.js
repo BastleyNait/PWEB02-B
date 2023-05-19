@@ -1,15 +1,28 @@
 function generar() {
     let aux  = document.querySelector("#filas");
     let numFilas = parseInt(aux.value);
-    const contenedor = document.getElementById("contenedor");
-    let table = document.createElement("table");
-    contenedor.appendChild(table);
-
+    let tabla = document.getElementById("tabla");
     for(let i = 0; i < numFilas; i++) {
-        let tr = document.createElement("tr");
-        let td = document.createElement("td");
-        let input = document.createElement("input");
-        
-
+        document.getElementById("tabla").innerHTML += `
+            <tr>
+                <td>
+                    <input type="text" id ="${i}" placeholder="hola">
+                </td>
+            </tr>
+        `;
     }
+
+    document.getElementById("tabla").innerHTML += `
+        <button onclick = "sumar()">Sumar!</button>
+    `
+}
+
+function sumar() {
+    let aux  = document.querySelector("#filas");
+    let numFilas = parseInt(aux.value);
+    let total = 0;
+    for(let i = 0; i < numFilas; i++) {
+        total += parseInt(document.getElementById(`${i}`).value);
+    }
+    document.getElementById("suma").innerHTML = `La suma es: ${total}`;
 }

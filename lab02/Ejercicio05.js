@@ -6,7 +6,7 @@ function generar() {
         document.getElementById("tabla").innerHTML += `
             <tr>
                 <td>
-                    <input type="text" id ="${i}" placeholder="hola">
+                    <input type="number" id ="${i}" placeholder="ingrese un numero">
                 </td>
             </tr>
         `;
@@ -24,5 +24,10 @@ function sumar() {
     for(let i = 0; i < numFilas; i++) {
         total += parseInt(document.getElementById(`${i}`).value);
     }
-    document.getElementById("suma").innerHTML = `La suma es: ${total}`;
+    if(!isNaN(total)) {
+        document.getElementById("suma").innerHTML = `La suma es: ${total}`;
+    } else {
+        document.getElementById("suma").innerHTML = `por favor, numeros`;
+    }
+
 }

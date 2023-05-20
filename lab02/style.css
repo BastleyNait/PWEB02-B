@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* estilo auxiliar */
+/* .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+} */
+
+
+
+input {
+    width: 200px;
+    margin: 3px;
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 5px;
+}
+
+button {
+    padding: 3px;
+    border-radius: 7px;
+    border-width: 1px;
+    margin: 3px;
+}

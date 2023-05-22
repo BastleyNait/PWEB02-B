@@ -28,7 +28,7 @@
    <tr><td>ASIGNATURA:</td><td colspan="5">Programación Web 2</td></tr>
    <tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Git - GitHub</td></tr>
    <tr>
-   <td>NÚMERO DE PRÁCTICA:</td><td>01</td><td>AÑO LECTIVO:</td><td>2023 A</td><td>NRO. SEMESTRE:</td><td>III</td>
+   <td>NÚMERO DE PRÁCTICA:</td><td>02</td><td>AÑO LECTIVO:</td><td>2023 A</td><td>NRO. SEMESTRE:</td><td>III</td>
    </tr>
    <tr>
    <td>FECHA Presentacion:</td><td>16-May-2023</td><td>Hora de Presentacion:</td><td colspan="3">2:00 pm</td>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">             
+    </head>
+<body>
+<div class="contenedor">
+    <input type="text" id="texto">
+    <button onclick='invertir()'>Inviérteme!</button> 
+    
+    <h3 id="demo"></h3>
+</div>
+
+<script>
+    function invertir() {
+        const texto = document.getElementById("texto").value;
+        let txt = "";
+        let contador = texto.length - 1;
+        while (contador >= 0) {
+            txt += texto[contador];
+            contador--;
+        }
+        document.querySelector("#demo").innerHTML = txt;
+    }
+    
+</script>
+
+</body>
+</html>

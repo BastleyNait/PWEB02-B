@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("misti.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    color: white;
+    text-align: center;
+}
+
+
+input {
+    padding: 5px;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+button {
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 5px;
+}

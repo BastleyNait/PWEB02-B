@@ -7,7 +7,7 @@ fetch('/titulos')
         <div class='caja'>
           <li>${titulo}</li>
           <button onclick='ver("${titulo}")'>Ver</button>
-          <button>Editar</button>
+          <button onclick='editar("${titulo}")'>Editar</button>
           <button>Eliminar</button>
         </div>
         <div id="contenido de ${titulo}"></div>
@@ -22,6 +22,22 @@ function ver(titulo) {
     document.getElementById(`contenido de ${titulo}`).innerHTML = data.contenido;
   });
 }
+
+function editar(titulo) {  
+  fetch(`/ver/${titulo}`)
+  .then(response => response.json())
+  .then(data => {   
+    let texto = document.getElementById(`contenido de ${titulo}`);
+    texto.innerHTML = `
+    <textarea id="markupText" name="markupText">${data.contenido}</textarea><br>
+    `;
+  });
+}
+
+
+
+
+
   
 
 

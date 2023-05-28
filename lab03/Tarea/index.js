@@ -36,3 +36,18 @@ app.get('/ver/:titulo', (req, res) => {
   res.json(texto);
 });
 
+app.post('/ver/:titulo', (req, res) => {
+  let datos = [];
+  const contenido = fs.readFileSync('datos.json', 'utf-8');
+  datos = JSON.parse(contenido);
+  datos.forEach((objeto) => {
+    if(objeto.titulo == req.params.titulo) {
+      texto = {
+        contenido: objeto.contenido
+      };
+    }
+  })
+  console.log(texto);
+  res.json(texto);
+});
+

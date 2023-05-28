@@ -3,11 +3,34 @@ fetch('/titulos')
   .then(data => {
     const listaTitulos = document.getElementById('lista-titulos');
     data.forEach(titulo => {
-      const li = document.createElement('li');
-      li.textContent = titulo;
-      listaTitulos.appendChild(li);
+      listaTitulos.innerHTML += `
+        <div class='caja'>
+          <li>${titulo}</li>
+          <button onclick="ver(${titulo})"></button>
+          <button>Editar</button>
+          <button>Eliminar</button>
+        </div>
+      `
     });
-  })
-  .catch(error => {
-    console.error('Error al obtener los títulos:', error);
   });
+
+function ver(titulo) {  
+  fetch(`/ver/${titulo}`)
+  .then(response => response.json())
+  .then(data => {
+    const listaTitulos = document.getElementById('lista-titulos');
+    data.forEach(titulo => {
+      listaTitulos.innerHTML += `
+        <div class='caja'>
+          <li>${titulo}</li>
+          <button onclick="ver(${titulo})"></button>
+          <button>Editar</button>
+          <button>Eliminar</button>
+        </div>
+      `
+    });
+  });
+}
+  
+
+

@@ -1,0 +1,27 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: wheat;
+}
+.caja {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    border-radius: 8px;
+    border-width: 0.5px;
+    margin: 3px;
+    font-size: 10px;
+}

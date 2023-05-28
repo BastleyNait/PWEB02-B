@@ -14,7 +14,7 @@ fetch('/titulos')
       `
     });
   });
-
+//sa
 function ver(titulo) {  
   fetch(`/ver/${titulo}`)
   .then(response => response.json())

@@ -1,8 +1,9 @@
 const express = require('express')
 const app = express()
+const MarkdownIt = require('markdown-it')
+const md = new MarkdownIt()
 const port = 3000
 const fs = require("fs")
-const { join } = require('path')
 app.use(express.static('pub'))
 app.use(express.json())
 
@@ -32,9 +33,13 @@ app.get('/ver/:titulo', (req, res) => {
         contenido: objeto.contenido
       };
     }
+    console.log(req.params.titulo);
   })
-  console.log(texto);
-  res.json(texto);
+  const htmltext = {
+    contenido: md.render(texto.contenido)
+  };
+  console.log(htmltext);
+  res.json(htmltext);
 });
 
 app.post('/ver/:titulo', (req, res) => {
@@ -78,3 +83,28 @@ app.delete('/editar/:titulo', (req, res) => {
     message:"el archivo ha sido eliminado"
   });
 });
+
+app.post('/crear', (req, res) => {
+  let datos = [];
+  const contenido = fs.readFileSync('datos.json', 'utf-8');
+  datos = JSON.parse(contenido);
+  console.log(req.body);
+  datos.push(req.body);
+  fs.writeFileSync('datos.json', JSON.stringify(datos), 'utf-8');
+  res.json({
+    message:"texto guardado con exito"
+  })
+})
+
+app.patch('/editar/:titulo', (req, res) => {
+  let datos = [];
+  const contenido = fs.readFileSync('datos.json', 'utf-8');
+  datos = JSON.parse(contenido);
+  datos = datos.filter((objeto) => objeto.titulo != req.params.titulo);
+  console.log("bañate");
+  datos.push(req.body);
+  fs.writeFileSync('datos.json', JSON.stringify(datos), 'utf-8');
+  res.json({
+    message:"se guardó con exito"
+  })
+})

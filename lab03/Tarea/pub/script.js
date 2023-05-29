@@ -10,7 +10,7 @@ fetch('/titulos')
           <button onclick='editar("${titulo}")'>Editar</button>
           <button onclick='eliminar("${titulo}")'>Eliminar</button>
         </div>
-        <div id="contenido de ${titulo}"></div>
+          <p id="contenido de ${titulo}"></p>
       `
     });
   });
@@ -19,6 +19,7 @@ function ver(titulo) {
   fetch(`/ver/${titulo}`)
   .then(response => response.json())
   .then(data => {
+    console.log(data.contenido);
     document.getElementById(`contenido de ${titulo}`).innerHTML = data.contenido;
   });
 }
@@ -29,8 +30,8 @@ function editar(titulo) {
   .then(data => {   
     let texto = document.getElementById(`contenido de ${titulo}`);
     texto.innerHTML = `
-    <textarea id="markupText de ${titulo}" name="markupText">${data.contenido}</textarea><br>
-    <button onclick='guardar(${titulo})'>guardar</button>
+    <textarea class = "edit" id="markupText de ${titulo}" name="markupText">${data.contenido}</textarea><br>
+    <button onclick='salvar("${titulo}")'>guardar</button>
     `;
   });
 }
@@ -49,12 +50,12 @@ function eliminar(titulo) {
 }
 
 
-function crear() {
-  const titulo = document.getElementById("titulo").value
+function guardar() {
+  const titulo = document.getElementById('titulo').value
   const contenido = document.getElementById('contenido').value;
   const data = {
     titulo: titulo,
-    contenido: texto
+    contenido: contenido
   }
   const req = {
     method: "POST",
@@ -64,9 +65,8 @@ function crear() {
 
   fetch('/crear', req)
   .then(res => res.json())
-  .then(data => {
-
-  })
+  .then(data => alert(data.message))
+  location.reload();
 }
 
 function nuevo() {
@@ -78,8 +78,21 @@ function nuevo() {
   `
 }
 
-function guardar() {
-
+function salvar (titulo) {
+  const contTexto = document.getElementById(`markupText de ${titulo}`).value
+  let data = {
+    titulo: titulo,
+    contenido: contTexto
+  }
+  const req = {
+    method: "PATCH",
+    headers: {'Content-Type': 'application/json',},
+    body: JSON.stringify(data)
+  }
+  fetch(`/editar/${titulo}`,req)
+  .then(response => response.json())
+  .then(data => alert(data.message))
+  location.reload();
 }
 
 

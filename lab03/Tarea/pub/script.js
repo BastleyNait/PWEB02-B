@@ -24,13 +24,17 @@ function ver(titulo) {
   });
 }
 
-function editar(titulo) {  
-  fetch(`/ver/${titulo}`)
+function editar(titulo) {
+  const request = {
+    method: 'POST', 
+    headers: {'Content-Type': 'application/json',},
+  }   
+  fetch(`/ver/${titulo}`,request)
   .then(response => response.json())
   .then(data => {   
     let texto = document.getElementById(`contenido de ${titulo}`);
     texto.innerHTML = `
-    <textarea class = "edit" id="markupText de ${titulo}" name="markupText">${data.contenido}</textarea><br>
+    <textarea class = "edit" id="markupText de ${titulo}" name="markupText" cols="30" rows="10">${data.contenido}</textarea><br>
     <button onclick='salvar("${titulo}")'>guardar</button>
     `;
   });
@@ -40,7 +44,7 @@ function eliminar(titulo) {
   const request = {
     method: 'DELETE', 
     headers: {'Content-Type': 'application/json',},
-}
+  } 
   fetch(`/editar/${titulo}`, request)
   .then(res => res.json())
   .then(data => {

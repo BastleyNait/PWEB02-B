@@ -8,7 +8,7 @@ fetch('/titulos')
           <li>${titulo}</li>
           <button onclick='ver("${titulo}")'>Ver</button>
           <button onclick='editar("${titulo}")'>Editar</button>
-          <button>Eliminar</button>
+          <button onclick='eliminar("${titulo}")'>Eliminar</button>
         </div>
         <div id="contenido de ${titulo}"></div>
       `
@@ -29,9 +29,23 @@ function editar(titulo) {
   .then(data => {   
     let texto = document.getElementById(`contenido de ${titulo}`);
     texto.innerHTML = `
-    <textarea id="markupText" name="markupText">${data.contenido}</textarea><br>
+    <textarea id="markupText de ${titulo}" name="markupText">${data.contenido}</textarea><br>
+    <button onclick='guardar(${titulo})'>guardar</button>
     `;
   });
+}
+
+function eliminar(titulo) {
+  const request = {
+    method: 'DELETE', 
+    headers: {'Content-Type': 'application/json',},
+}
+  fetch(`/editar/${titulo}`, request)
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message)
+    location.reload();
+  })
 }
 
 

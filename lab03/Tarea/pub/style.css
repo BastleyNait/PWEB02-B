@@ -25,3 +25,12 @@ button {
     margin: 3px;
     font-size: 10px;
 }
+
+.areaTexto {
+    display: flex;
+    flex-direction: column;
+}
+
+#titulo {
+    margin: 5px;
+}

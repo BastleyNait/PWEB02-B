@@ -49,6 +49,38 @@ function eliminar(titulo) {
 }
 
 
+function crear() {
+  const titulo = document.getElementById("titulo").value
+  const contenido = document.getElementById('contenido').value;
+  const data = {
+    titulo: titulo,
+    contenido: texto
+  }
+  const req = {
+    method: "POST",
+    headers: {'Content-Type': 'application/json',},
+    body: JSON.stringify(data)
+  }
+
+  fetch('/crear', req)
+  .then(res => res.json())
+  .then(data => {
+
+  })
+}
+
+function nuevo() {
+  const espacios = document.querySelector(".areaTexto")
+  espacios.innerHTML = `
+  <textarea name="titulo" id="titulo" cols="30" rows="1" placeholder="Titulo" required></textarea>
+  <textarea name="contenido" id="contenido" cols="60" rows="10" placeholder="Contenido en Markdown" required></textarea>
+  <button onclick="guardar()">Guardar</button>
+  `
+}
+
+function guardar() {
+
+}
 
 
 

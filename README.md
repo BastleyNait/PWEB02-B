@@ -103,22 +103,6 @@
      npm install markdown-it
      npm install nodemon
 ```
-En este caso utilicé nodemon para poder actualizar en tiempo real y no tener que estar desconectado el servidor cada vez que tenga que hacer un cambio.
-****Run the app****
-
-```sh
-     npx nodemon index.js
-```
-Árbol de documentos utilizados:
-<div>
-<p style = 'text-align:center;'>
-<img src="https://github.com/GonzaloRail/Laboratorio_03_PWEB2_GRUPAL/blob/main/img/1.png?raw=true" alt="JuveYell" width="300px">
-<img src="https://github.com/GonzaloRail/Laboratorio_03_PWEB2_GRUPAL/blob/main/img/2.jpeg?raw=true" width="300px">
-</p>
-</div>
-
-
-#
 
 -   **Servidor**
     

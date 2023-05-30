@@ -5,15 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <title>Markdown a HTML</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Markdown a HTML</h1>
-  <ul id="lista-titulos"></ul>
-  <button onclick="nuevo()">Nuevo Documento</button>
-  <div class="areaTexto">
+  <header class="cabecera">
+    <h1>Block Markdown de Bazz</h1>
+  </header>
+  <div class="cuerpo">
+    <h4>Tu lista de documentos: </h4>
+    <ul id="lista-titulos"></ul>
+    <button id="nuevoDoc" onclick="nuevo()">Nuevo Documento</button>
+    <div class="areaTexto">
+    </div>
   </div>
   <script src="script.js"></script>
 </body>

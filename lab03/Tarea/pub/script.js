@@ -6,11 +6,13 @@ fetch('/titulos')
       listaTitulos.innerHTML += `
         <div class='caja'>
           <li>${titulo}</li>
-          <button onclick='ver("${titulo}")'>Ver</button>
-          <button onclick='editar("${titulo}")'>Editar</button>
-          <button onclick='eliminar("${titulo}")'>Eliminar</button>
-        </div>
-          <p id="contenido de ${titulo}"></p>
+          <div class="botones">
+            <button onclick='ver("${titulo}")'>Ver</button>
+            <button onclick='editar("${titulo}")'>Editar</button>
+            <button onclick='eliminar("${titulo}")'>Eliminar</button>
+          </div>
+          </div>
+          <div class="contenidoTexto" id="contenido de ${titulo}"></div>
       `
     });
   });
@@ -34,8 +36,10 @@ function editar(titulo) {
   .then(data => {   
     let texto = document.getElementById(`contenido de ${titulo}`);
     texto.innerHTML = `
-    <textarea class = "edit" id="markupText de ${titulo}" name="markupText" cols="30" rows="10">${data.contenido}</textarea><br>
-    <button onclick='salvar("${titulo}")'>guardar</button>
+    <div class="edit">
+      <textarea class = "edit" id="markupText de ${titulo}" name="markupText" cols="50" rows="10">${data.contenido}</textarea><br>
+      <button onclick='salvar("${titulo}")'>guardar</button>
+    </div>
     `;
   });
 }
@@ -76,8 +80,8 @@ function guardar() {
 function nuevo() {
   const espacios = document.querySelector(".areaTexto")
   espacios.innerHTML = `
-  <textarea name="titulo" id="titulo" cols="30" rows="1" placeholder="Titulo" required></textarea>
-  <textarea name="contenido" id="contenido" cols="60" rows="10" placeholder="Contenido en Markdown" required></textarea>
+  <textarea class="nuevoTexto" name="titulo" id="titulo" cols="30" rows="1" placeholder="Titulo" required></textarea>
+  <textarea class="nuevoTexto" name="contenido" id="contenido" cols="60" rows="10" placeholder="Contenido en Markdown" required></textarea>
   <button onclick="guardar()">Guardar</button>
   `
 }

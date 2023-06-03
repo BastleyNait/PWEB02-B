@@ -8,4 +8,19 @@ from chessPictures import *
 
 # draw(blanco.up(negro).verticalRepeat(4))
 
-draw(knight.negative().under(square.negative()))
+# draw(knight.negative().under(square.negative()))
+
+# draw(knight.horizontalRepeat(6))
+
+# doble peon blanco sobre tablero blanco y negro
+peonx2B = pawn.under(square).join(pawn.under(square.negative()))
+# doble peon negro sobre tablero negro y blanco
+peonx2N = pawn.negative().under(square.negative()).join(pawn.negative().under(square))
+# tablero 8 x 4 
+tab1x8 = ((square.join(square.negative())).horizontalRepeat(4))
+tab4x8 = tab1x8.verticalRepeat(4)
+draw(tab4x8)
+
+
+
+

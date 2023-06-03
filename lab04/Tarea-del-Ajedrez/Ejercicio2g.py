@@ -29,7 +29,7 @@ rockNtN = rock.negative().under(square.negative())
 # torre blanca tablero negro
 rockBtN = rock.under(square.negative())
 # torre blanca tablero blanco
-rockNtB = rock.under(square)
+rockBtB = rock.under(square)
 """CABALLO"""
 # torre negra tablero blanco
 knightNtB = knight.negative().under(square)
@@ -38,7 +38,7 @@ knightNtN = knight.negative().under(square.negative())
 # torre blanca tablero negro
 knightBtN = knight.under(square.negative())
 # torre blanca tablero blanco
-knightNtB = knight.under(square)
+knightBtB = knight.under(square)
 """ALFIL"""
 # torre negra tablero blanco
 bishopNtB = bishop.negative().under(square)
@@ -47,7 +47,7 @@ bishopNtN = bishop.negative().under(square.negative())
 # torre blanca tablero negro
 bishopBtN = bishop.under(square.negative())
 # torre blanca tablero blanco
-bishopNtB = bishop.under(square)
+bishopBtB = bishop.under(square)
 """REINA"""
 # torre negra tablero blanco
 queenNtB = queen.negative().under(square)
@@ -56,7 +56,7 @@ queenNtN = queen.negative().under(square.negative())
 # torre blanca tablero negro
 queenBtN = queen.under(square.negative())
 # torre blanca tablero blanco
-queenNtB = queen.under(square)
+queenBtB = queen.under(square)
 
 """REY"""
 # torre negra tablero blanco
@@ -66,11 +66,16 @@ kingNtN = king.negative().under(square.negative())
 # torre blanca tablero negro
 kingBtN = king.under(square.negative())
 # torre blanca tablero blanco
-kingNtB = king.under(square)
+kingBtB = king.under(square)
+
+"""CADENA NEGRO"""
+cadenaN = rockNtB.join(knightNtN.join(bishopNtB.join(queenNtN.join(kingNtB.join(bishopNtN.join(kingNtB.join(rockNtN)))))))
+
+"""CADENA BLANCO"""
+cadenaB = rockBtB.join(knightBtN.join(bishopBtB.join(queenBtN.join(kingBtB.join(bishopBtN.join(kingBtB.join(rockBtN)))))))
 
 
-
-draw(rockNtN)
+draw(cadenaB)
 
 
 

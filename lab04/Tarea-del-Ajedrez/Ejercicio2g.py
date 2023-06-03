@@ -1,5 +1,6 @@
 from interpreter import draw
 from chessPictures import *
+"""PRUEBAS"""
 # squareN = square.negative().join(square)
 # squareB = square.join(square.negative())
 
@@ -11,11 +12,12 @@ from chessPictures import *
 # draw(knight.negative().under(square.negative()))
 
 # draw(knight.horizontalRepeat(6))
-
+"""FILA PEONES"""
 # doble peon blanco sobre tablero blanco y negro x 6
 peonx2B = (pawn.under(square).join(pawn.under(square.negative()))).horizontalRepeat(4)
 # doble peon negro sobre tablero negro y blanco x 6
 peonx2N = (pawn.negative().under(square.negative()).join(pawn.negative().under(square))).horizontalRepeat(4)
+"""TABLERO DEL MEDIO"""
 # tablero 2 x 2 
 tab2x2 = ((square.join(square.negative())).up(square.negative().join(square)))
 # tablero 8 x 4 
@@ -69,13 +71,13 @@ kingBtN = king.under(square.negative())
 kingBtB = king.under(square)
 
 """CADENA NEGRO"""
-cadenaN = rockNtB.join(knightNtN.join(bishopNtB.join(queenNtN.join(kingNtB.join(bishopNtN.join(kingNtB.join(rockNtN)))))))
+cadenaN = rockNtB.join(knightNtN.join(bishopNtB.join(queenNtN.join(kingNtB.join(bishopNtN.join(knightNtB.join(rockNtN)))))))
 
 """CADENA BLANCO"""
-cadenaB = rockBtB.join(knightBtN.join(bishopBtB.join(queenBtN.join(kingBtB.join(bishopBtN.join(kingBtB.join(rockBtN)))))))
+cadenaB = rockBtB.join(knightBtN.join(bishopBtB.join(queenBtN.join(kingBtB.join(bishopBtN.join(knightBtB.join(rockBtN)))))))
 
-
-draw(cadenaB)
+"""DIBUJANDO TABLERO COMPLETO"""
+draw(((cadenaN.up(peonx2N)).up(tab8x4)).up(peonx2B.up(cadenaB)))
 
 
 

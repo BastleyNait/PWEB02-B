@@ -25,36 +25,36 @@ tab8x4 = (tab2x2.horizontalRepeat(4)).verticalRepeat(2)
 # torre negra tablero blanco
 rockNtB = rock.negative().under(square)
 # torre negra tablero negro
-rockNtN = rock.negative().under(square.negative)
+rockNtN = rock.negative().under(square.negative())
 # torre blanca tablero negro
-rockBtN = rock.under(square.negative)
+rockBtN = rock.under(square.negative())
 # torre blanca tablero blanco
 rockNtB = rock.under(square)
 """CABALLO"""
 # torre negra tablero blanco
 knightNtB = knight.negative().under(square)
 # torre negra tablero negro
-knightNtN = knight.negative().under(square.negative)
+knightNtN = knight.negative().under(square.negative())
 # torre blanca tablero negro
-knightBtN = knight.under(square.negative)
+knightBtN = knight.under(square.negative())
 # torre blanca tablero blanco
 knightNtB = knight.under(square)
 """ALFIL"""
 # torre negra tablero blanco
 bishopNtB = bishop.negative().under(square)
 # torre negra tablero negro
-bishopNtN = bishop.negative().under(square.negative)
+bishopNtN = bishop.negative().under(square.negative())
 # torre blanca tablero negro
-bishopBtN = bishop.under(square.negative)
+bishopBtN = bishop.under(square.negative())
 # torre blanca tablero blanco
 bishopNtB = bishop.under(square)
 """REINA"""
 # torre negra tablero blanco
 queenNtB = queen.negative().under(square)
 # torre negra tablero negro
-queenNtN = queen.negative().under(square.negative)
+queenNtN = queen.negative().under(square.negative())
 # torre blanca tablero negro
-queenBtN = queen.under(square.negative)
+queenBtN = queen.under(square.negative())
 # torre blanca tablero blanco
 queenNtB = queen.under(square)
 
@@ -62,14 +62,15 @@ queenNtB = queen.under(square)
 # torre negra tablero blanco
 kingNtB = king.negative().under(square)
 # torre negra tablero negro
-kingNtN = king.negative().under(square.negative)
+kingNtN = king.negative().under(square.negative())
 # torre blanca tablero negro
-kingBtN = king.under(square.negative)
+kingBtN = king.under(square.negative())
 # torre blanca tablero blanco
 kingNtB = king.under(square)
 
 
-draw(peonx2B)
+
+draw(rockNtN)
 
 
 

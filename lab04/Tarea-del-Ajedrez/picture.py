@@ -44,7 +44,16 @@ class Picture:
     def under(self, p):
         """ Devuelve una nueva figura poniendo la figura p sobre la
             figura actual """
-        return Picture(p.img + self.img)
+        superpuesto=[]
+        if "_" in p.img[0]:
+            for elem in self.img:
+                aux = elem.replace(" ", "_")
+                superpuesto.append(aux)
+        else:
+            for elem in self.img:
+                aux = elem.replace(" ", "=")
+                superpuesto.append(aux)
+        return Picture(superpuesto)
 
     def horizontalRepeat(self, n):
         """ Devuelve una nueva figura repitiendo la figura actual al costado

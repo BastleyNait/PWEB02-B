@@ -1,0 +1,396 @@
+%package list
+\documentclass{article}
+\usepackage[top=3cm, bottom=3cm, outer=3cm, inner=3cm]{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{url}
+%\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{array}
+%\usepackage{multicol}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+\usepackage{natbib}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{svg}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstdefinestyle{ascii-tree}{
+    literate={├}{|}1 {─}{--}1 {└}{+}1 
+  }
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+%\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{array}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\itemEmail}{schirinosne@unsa.edu.pe}
+\newcommand{\itemStudent}{Sebastian Arley Chirinos Negrón}
+\newcommand{\itemCourse}{Programación Web 2}
+\newcommand{\itemCourseCode}{1702122}
+\newcommand{\itemSemester}{I}
+\newcommand{\itemUniversity}{Universidad Nacional de San Agustín de Arequipa}
+\newcommand{\itemFaculty}{Facultad de Ingeniería de Producción y Servicios}
+\newcommand{\itemDepartment}{Departamento Académico de Ingeniería de Sistemas e Informática}
+\newcommand{\itemSchool}{Escuela Profesional de Ingeniería de Sistemas}
+\newcommand{\itemAcademic}{2023 - A}
+\newcommand{\itemInput}{Del 29 Mayo 2023}
+\newcommand{\itemOutput}{Al 05 Junio 2023}
+\newcommand{\itemPracticeNumber}{04}
+\newcommand{\itemTheme}{Python}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english,spanish]{babel}
+\usepackage[utf8]{inputenc}
+\AtBeginDocument{\selectlanguage{spanish}}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\refname}{Referencias}
+\renewcommand{\tablename}{Tabla} %esto no funciona cuando se usa babel
+\AtBeginDocument{%
+	\renewcommand\tablename{Tabla}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{30pt}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[width=3cm]{img/logo_episunsa.png}}}
+\fancyhead[C]{\fontsize{7}{7}\selectfont	\itemUniversity \\ \itemFaculty \\ \itemDepartment \\ \itemSchool \\ \textbf{\itemCourse}}
+\fancyhead[R]{\raisebox{-0.2\height}{\includegraphics[width=1.2cm]{img/logo_abet}}}
+\fancyfoot[L]{Sebastian Chirinos Negrón}
+\fancyfoot[C]{\itemCourse}
+\fancyfoot[R]{Página \thepage}
+
+% para el codigo fuente
+\usepackage{listings}
+\usepackage{color, colortbl}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{codebackground}{rgb}{0.95, 0.95, 0.92}
+\definecolor{tablebackground}{rgb}{0.8, 0, 0}
+
+\lstset{frame=tb,
+	language=bash,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	backgroundcolor= \color{codebackground},
+}
+
+\begin{document}
+	
+	\vspace*{10px}
+	
+	\begin{center}	
+		\fontsize{17}{17} \textbf{ Informe de Laboratorio \itemPracticeNumber}
+	\end{center}
+	\centerline{\textbf{\Large Tema: \itemTheme}}
+	%\vspace*{0.5cm}	
+
+	\begin{flushright}
+		\begin{tabular}{|M{2.5cm}|N|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white} \textbf{Nota}  \\
+			\hline 
+			     \\[30pt]
+			\hline 			
+		\end{tabular}
+	\end{flushright}	
+
+	\begin{table}[H]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white} \textbf{Estudiante} & \color{white}\textbf{Escuela}  & \color{white}\textbf{Asignatura}   \\
+			\hline 
+			{\itemStudent \par \itemEmail} & \itemSchool & {\itemCourse \par Semestre: \itemSemester \par Código: \itemCourseCode}     \\
+			\hline 			
+		\end{tabular}
+	\end{table}		
+	
+	\begin{table}[H]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white}\textbf{Laboratorio} & \color{white}\textbf{Tema}  & \color{white}\textbf{Duración}   \\
+			\hline 
+			\itemPracticeNumber & \itemTheme & 04 horas   \\
+			\hline 
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white}\textbf{Semestre académico} & \color{white}\textbf{Fecha de inicio}  & \color{white}\textbf{Fecha de entrega}   \\
+			\hline 
+			\itemAcademic & \itemInput &  \itemOutput  \\
+			\hline 
+		\end{tabular}
+	\end{table}
+	
+	\section{Tarea}
+	\begin{itemize}		
+		\item En esta tarea usted pondrá en práctica sus conocimientos de programación en Python para dibujar un tablero de Ajedrez.
+		\item La parte gráfica ya está programada, usted sólo tendrá que concentrarse en las estructuras de datos subyacentes.
+		\item Con el código proporcionado usted dispondrá de varios objetos de tipo Picture para poder realizar su tarea:
+	\end{itemize}
+		
+	\section{Equipos, materiales y temas utilizados}
+	\begin{itemize}
+		\item Programar usando Python.
+		\item Mostrar un ejemplo de separación de intereses en clases: el modelo (lista de strings) de su vista (dibujo de gráficos).	
+		\item Listas
+		\item Ciclos
+		\item Programación orientada a objetos
+		\item ¿Programación funcional?
+		
+	\end{itemize}
+	
+	\section{URL de Repositorio Github}
+	\begin{itemize}
+		\item URL del Repositorio GitHub para clonar o recuperar.
+		\item \url{https://github.com/BastleyNait/PWEB02-B.git}
+		\item URL para el laboratorio 04 en el Repositorio GitHub.
+		\item \url{https://github.com/BastleyNait/PWEB02-B/tree/main/lab04}
+	\end{itemize}
+	
+	\section{Actividades con el repositorio GitHub}
+	
+	\subsection{Ejercicio 01}
+	\begin{itemize}	
+		\item Implemente los métodos de la clase Picture. Se recomienda que implemente la clase picture por etapas, probando realizar los dibujos que se muestran en la siguiente preguntas.
+	\end{itemize}	
+	
+	\lstinputlisting[language=Python, caption={picture.py},numbers=left,]{src/picture.py}	
+
+	\subsection{Ejercicio 02a}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+	
+	\lstinputlisting[language=Python, caption={Ejercicio2a.py},numbers=left,]{src/Ejercicio2a.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth,keepaspectratio]{img/Ejercicio2a.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+
+	\subsection{Ejercicio 02b}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+	
+	\lstinputlisting[language=Python, caption={Ejercicio2b.py},numbers=left,]{src/Ejercicio2b.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth,keepaspectratio]{img/Ejercicio2b.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02c}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+	
+	\lstinputlisting[language=Python, caption={Ejercicio2c.py},numbers=left,]{src/Ejercicio2c.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,keepaspectratio]{img/Ejercicio2c.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02d}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+	
+	\lstinputlisting[language=Python, caption={Ejercicio2d.py},numbers=left,]{src/Ejercicio2d.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,keepaspectratio]{img/Ejercicio2d.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02d}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+	
+	\lstinputlisting[language=Python, caption={Ejercicio2d.py},numbers=left,]{src/Ejercicio2d.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,keepaspectratio]{img/Ejercicio2d.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02e}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+	
+	\lstinputlisting[language=Python, caption={Ejercicio2e.py},numbers=left,]{src/Ejercicio2e.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,keepaspectratio]{img/Ejercicio2e.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02f}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+	
+	\lstinputlisting[language=Python, caption={Ejercicio2f.py},numbers=left,]{src/Ejercicio2f.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,keepaspectratio]{img/Ejercicio2f.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02g}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+	
+	\lstinputlisting[language=Python, caption={Ejercicio2g.py},numbers=left,]{src/Ejercicio2g.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth,keepaspectratio]{img/Ejercicio2g.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+		
+	\subsection{Estructura de laboratorio 04}
+	\begin{itemize}	
+		\item El contenido que se entrega en este laboratorio es el siguiente:
+	\end{itemize}
+	
+\begin{lstlisting}[style=ascii-tree]
+lab01/
+|--- Insertion.java
+|--- latex
+    |--- img
+    |   |--- logo_abet.png
+    |   |--- logo_episunsa.png
+    |   |--- logo_unsa.jpg
+    |   |--- pseudocodigo_insercion.png    
+    |--- programacion_lab01_rescobedoq_v1.0.pdf    
+    |--- programacion_lab01_rescobedoq_v1.0.tex
+    |--- src
+        |--- Insertion01.java
+\end{lstlisting}    
+
+\section{Pregunta: ¿Qué son los archivos *.pyc?}
+	\begin{itemize}
+		\item Los archivos .pyc son archivos de código compilado en Python. Cuando un archivo fuente de Python (.py) se ejecuta, el intérprete de Python compila ese código en bytecode, que es una representación intermedia del código que puede ser ejecutada más rápido por la máquina virtual de Python. Los archivos *.pyc contienen este bytecode compilado y se generan automáticamente cuando se importa un módulo en Python.
+	\end{itemize}	
+	\section{Pregunta: ¿Para qué sirve el directorio pycache?}
+	\begin{itemize}
+		\item El directorio "pycache" es un directorio que se crea automáticamente en Python 3 para almacenar los archivos *.pyc. Cuando se importa un módulo en Python, el intérprete buscará si existe un archivo *.pyc correspondiente en el directorio "pycache". Si lo encuentra y es más reciente que el archivo *.py fuente, el intérprete utilizará el archivo *.pyc en su lugar para ahorrar tiempo de compilación. Si no existe un archivo *.pyc o está desactualizado, el intérprete generará uno nuevo.
+	\end{itemize}	
+	\section{Pregunta: ¿Cuáles son los usos y lo que representa el subguión en Python?}
+	\begin{itemize}
+		\item En cuanto al subguión en Python, se le conoce como underscore y se utiliza de diferentes formas:
+		\item Nombres de variables especiales: En Python, el subguión se utiliza para nombres de variables especiales que tienen un significado específico. Por ejemplo, un subguión simple se utiliza a menudo como un nombre de variable temporal o como un lugar para ignorar valores que no se necesitan.
+		\item Convención para nombres privados: El subguión doble al inicio de un nombre de variable por ejemplo, nombre se utiliza como convención para indicar que un atributo o método es "privado" en Python. No hay verdaderos atributos o métodos privados en Python, pero se considera una convención de estilo no acceder directamente a estos atributos o métodos desde fuera de la clase.
+		\item Uso en importaciones: El subguión se utiliza a menudo en las importaciones de módulos en Python.
+	\end{itemize}		
+
+\section{Referencias}
+\begin{itemize}			
+	\item \url{https://www.w3schools.com/python/python_reference.asp}
+	\item \url{https://docs.python.org/3/tutorial/}
+\end{itemize}	
+	
+%\clearpage
+%\bibliographystyle{apalike}
+%\bibliographystyle{IEEEtranN}
+%\bibliography{bibliography}
+			
+\end{document}

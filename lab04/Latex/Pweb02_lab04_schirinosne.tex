@@ -39,8 +39,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\itemEmail}{schirinosne@unsa.edu.pe}
 \newcommand{\itemStudent}{Sebastian Arley Chirinos Negrón}
-\newcommand{\itemCourse}{Estructura de datos y Algoritmos}
-\newcommand{\itemCourseCode}{1702124}
+\newcommand{\itemCourse}{Programación Web 2}
+\newcommand{\itemCourseCode}{1702122}
 \newcommand{\itemSemester}{I}
 \newcommand{\itemUniversity}{Universidad Nacional de San Agustín de Arequipa}
 \newcommand{\itemFaculty}{Facultad de Ingeniería de Producción y Servicios}
@@ -49,8 +49,8 @@
 \newcommand{\itemAcademic}{2023 - A}
 \newcommand{\itemInput}{Del 29 Mayo 2023}
 \newcommand{\itemOutput}{Al 05 Junio 2023}
-\newcommand{\itemPracticeNumber}{01}
-\newcommand{\itemTheme}{Java}
+\newcommand{\itemPracticeNumber}{04}
+\newcommand{\itemTheme}{Python}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -83,7 +83,7 @@
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
-\definecolor{codebackground}{rgb}{72, 0.95, 0.92}
+\definecolor{codebackground}{rgb}{0.95, 0.95, 0.92}
 \definecolor{tablebackground}{rgb}{0.8, 0, 0}
 
 \lstset{frame=tb,
@@ -105,9 +105,9 @@
 }
 
 \begin{document}
-	
+
 	\vspace*{10px}
-	
+
 	\begin{center}	
 		\fontsize{17}{17} \textbf{ Informe de Laboratorio \itemPracticeNumber}
 	\end{center}
@@ -135,7 +135,7 @@
 			\hline 			
 		\end{tabular}
 	\end{table}		
-	
+
 	\begin{table}[H]
 		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
 			\hline 
@@ -146,7 +146,7 @@
 			\hline 
 		\end{tabular}
 	\end{table}
-	
+
 	\begin{table}[H]
 		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
 			\hline 
@@ -157,70 +157,53 @@
 			\hline 
 		\end{tabular}
 	\end{table}
-	
+
 	\section{Tarea}
 	\begin{itemize}		
-		\item Cree una cuenta de usuario en GitHub usando su correo institucional.
-		\item [opcional por ahora] Configure su cuenta de estudiante (https://education.github.com/pack).
-		\item Cree un nuevo proyecto personal y desarrolle el ejercicio resuelto en clase. Haga 3 commits como mínimo y muéstrelos. Commit para "¡Hola mundo!", otro para "Bienvenida al curso" y otro para imprimir su nombre.
-		\item Cree un proyecto grupal para trabajo colaborativo (de 3 a 5 integrantes).
-		\item Cree un archivo por cada tema del manual de java (https://www.w3schools.com/java/default.asp), haga commit e inluyalo en su informe grupal (Dividanse los temas).
-		\item Cree ramas para cada integrante y cada cierto tiempo una las ramas al main. No elimine nada para evidenciar ramas, main y commits.
-
-		
+		\item En esta tarea usted pondrá en práctica sus conocimientos de programación en Python para dibujar un tablero de Ajedrez.
+		\item La parte gráfica ya está programada, usted sólo tendrá que concentrarse en las estructuras de datos subyacentes.
+		\item Con el código proporcionado usted dispondrá de varios objetos de tipo Picture para poder realizar su tarea:
 	\end{itemize}
-		
+
 	\section{Equipos, materiales y temas utilizados}
 	\begin{itemize}
-		\item Editor Vim
-		\item Java
-		\item Git
-		\item GitHub
-		\item C.m. Construye responsablemente soluciones haciendo uso de estructuras de datos y algoritmos, siguiendo un proceso adecuado para resolver problemas computacionales que se ajustan al uso de los recursos disponibles y a especificaciones concretas.
-		
+		\item Programar usando Python.
+		\item Mostrar un ejemplo de separación de intereses en clases: el modelo (lista de strings) de su vista (dibujo de gráficos).	
+		\item Listas
+		\item Ciclos
+		\item Programación orientada a objetos
+		\item ¿Programación funcional?
+
 	\end{itemize}
-	
+
 	\section{URL de Repositorio Github}
 	\begin{itemize}
 		\item URL del Repositorio GitHub para clonar o recuperar.
-		\item \url{https://github.com/BastleyNait/EDA-LAB-B-23A.git}
+		\item \url{https://github.com/BastleyNait/PWEB02-B.git}
 		\item URL para el laboratorio 04 en el Repositorio GitHub.
-		\item \url{https://github.com/BastleyNait/EDA-LAB-B-23A/tree/main/lab01}
+		\item \url{https://github.com/BastleyNait/PWEB02-B/tree/main/lab04}
 	\end{itemize}
-	
-	\section{Programa en java: Test de iq}
 
-	\subsection{Clase Main}
+	\section{Actividades con el repositorio GitHub}
+
+	\subsection{Ejercicio 01}
 	\begin{itemize}	
-		\item Este un programa Java que utiliza la clase Archivos para leer preguntas de un archivo de texto llamado "TestdeIQ.txt" y permite al usuario ingresar respuestas para cada pregunta. A continuación, se explica el flujo general del programa:
+		\item Implemente los métodos de la clase Picture. Se recomienda que implemente la clase picture por etapas, probando realizar los dibujos que se muestran en la siguiente preguntas.
 	\end{itemize}	
-	
-	\lstinputlisting[language=Java, caption={Main.java},numbers=left,]{src/Main.java}	
 
-	\begin{itemize}	
-		\item Motrando la Ejecución del codigo:
-	\end{itemize}	
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.3\textwidth,keepaspectratio]{img/Ejercicio2a.png}
-		%\includesvg{img/automata.svg}
-		%\label{img:mot2}
-		%\caption{Product backlog.}
-	\end{figure}
+	\lstinputlisting[language=Python, caption={picture.py},numbers=left,]{src/picture.py}	
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\subsection{Ejercicio 02a}
 	\begin{itemize}	
 		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
 	\end{itemize}	
-	
+
 	\lstinputlisting[language=Python, caption={Ejercicio2a.py},numbers=left,]{src/Ejercicio2a.py}	
 
 	\begin{itemize}	
 		\item Motrando la Ejecución del codigo:
 	\end{itemize}	
-	
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.3\textwidth,keepaspectratio]{img/Ejercicio2a.png}
@@ -229,61 +212,164 @@
 		%\caption{Product backlog.}
 	\end{figure}
 
-		
+
+	\subsection{Ejercicio 02b}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+
+	\lstinputlisting[language=Python, caption={Ejercicio2b.py},numbers=left,]{src/Ejercicio2b.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth,keepaspectratio]{img/Ejercicio2b.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02c}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+
+	\lstinputlisting[language=Python, caption={Ejercicio2c.py},numbers=left,]{src/Ejercicio2c.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,keepaspectratio]{img/Ejercicio2c.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02d}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+
+	\lstinputlisting[language=Python, caption={Ejercicio2d.py},numbers=left,]{src/Ejercicio2d.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,keepaspectratio]{img/Ejercicio2d.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02d}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+
+	\lstinputlisting[language=Python, caption={Ejercicio2d.py},numbers=left,]{src/Ejercicio2d.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,keepaspectratio]{img/Ejercicio2d.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02e}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+
+	\lstinputlisting[language=Python, caption={Ejercicio2e.py},numbers=left,]{src/Ejercicio2e.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,keepaspectratio]{img/Ejercicio2e.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02f}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+
+	\lstinputlisting[language=Python, caption={Ejercicio2f.py},numbers=left,]{src/Ejercicio2f.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,keepaspectratio]{img/Ejercicio2f.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
+	\subsection{Ejercicio 02g}
+	\begin{itemize}	
+		\item Antes de ejecutar el código tenemos que tener en cuenta el importar la función draw del archivo interpreter.py y también todas las funciones de chessPicture:
+	\end{itemize}	
+
+	\lstinputlisting[language=Python, caption={Ejercicio2g.py},numbers=left,]{src/Ejercicio2g.py}	
+
+	\begin{itemize}	
+		\item Motrando la Ejecución del codigo:
+	\end{itemize}	
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth,keepaspectratio]{img/Ejercicio2g.png}
+		%\includesvg{img/automata.svg}
+		%\label{img:mot2}
+		%\caption{Product backlog.}
+	\end{figure}
+
 	\subsection{Estructura de laboratorio 04}
 	\begin{itemize}	
 		\item El contenido que se entrega en este laboratorio es el siguiente:
 	\end{itemize}
-	
+
 \begin{lstlisting}[style=ascii-tree]
-lab04/
-+---EjerciciosDocente
-|       defs.py
-|       esEscalar.py
-|       esPalindromo.py
-|       esUnitaria.py
-|       numeroPares.py
-|       operadoresArit.py
-|       pythonClass.py
-|       strings.py
-|       tablaDeMulti.py
-|       test_esEscalar.py
-|       test_esUnitaria.py
-|       tiposDeDatos.py
+lab01/
+|   .gitignore
+|   Pweb02_lab04_schirinosne.pdf
+|   Pweb02_lab04_schirinosne.tex
 |
-+---Latex
-|   |   .gitignore
-|   |   Pweb02_lab04_schirinosne.pdf
-|   |   Pweb02_lab04_schirinosne.tex
-|   |
-|   +---img
-|   |       Ejercicio2a.png
-|   |       Ejercicio2b.png
-|   |       Ejercicio2c.png
-|   |       Ejercicio2d.png
-|   |       Ejercicio2e.png
-|   |       Ejercicio2f.png
-|   |       Ejercicio2g.png
-|   |       logo_abet.png
-|   |       logo_episunsa.png
-|   |       logo_unsa.jpg
-|   |       pseudocodigo_insercion.png
-|   |
-|   \---src
-|           Ejercicio2a.py
-|           Ejercicio2b.py
-|           Ejercicio2c.py
-|           Ejercicio2d.py
-|           Ejercicio2e.py
-|           Ejercicio2f.py
-|           Ejercicio2g.py
-|           Insertion01.java
-|           picture.py
++---img
+|       Ejercicio2a.png
+|       Ejercicio2b.png
+|       Ejercicio2c.png
+|       Ejercicio2d.png
+|       Ejercicio2e.png
+|       Ejercicio2f.png
+|       Ejercicio2g.png
+|       logo_abet.png
+|       logo_episunsa.png
+|       logo_unsa.jpg
 |
-\---Tarea-del-Ajedrez
-        .gitignore
-        chessPictures.py
-        colors.py
+\---src
         Ejercicio2a.py
         Ejercicio2b.py
         Ejercicio2c.py
@@ -291,10 +377,7 @@ lab04/
         Ejercicio2e.py
         Ejercicio2f.py
         Ejercicio2g.py
-        interpreter.py
         picture.py
-        pieces.py
-        prueba.py
 \end{lstlisting}    
 
 \section{Pregunta: ¿Qué son los archivos *.pyc?}
@@ -311,92 +394,72 @@ lab04/
 		\item Nombres de variables especiales: En Python, el subguión se utiliza para nombres de variables especiales que tienen un significado específico. Por ejemplo, un subguión simple se utiliza a menudo como un nombre de variable temporal o como un lugar para ignorar valores que no se necesitan.
 		\item Convención para nombres privados: El subguión doble al inicio de un nombre de variable por ejemplo, nombre se utiliza como convención para indicar que un atributo o método es "privado" en Python. No hay verdaderos atributos o métodos privados en Python, pero se considera una convención de estilo no acceder directamente a estos atributos o métodos desde fuera de la clase.
 		\item Uso en importaciones: El subguión se utiliza a menudo en las importaciones de módulos en Python.
-	\end{itemize}		
-	\section{\textcolor{red}{Rúbricas}}
-	
-	\subsection{\textcolor{red}{Entregable Informe}}
-	\begin{table}[H]
-		\caption{Tipo de Informe}
-		\setlength{\tabcolsep}{0.5em} % for the horizontal padding
-		{\renewcommand{\arraystretch}{1.5}% for the vertical padding
-		\begin{tabular}{|p{3cm}|p{12cm}|}
+	\end{itemize}	
+\subsection{\textcolor{red}{Rúbrica para el contenido del Informe y demostración}}
+\begin{itemize}			
+	\item El alumno debe marcar o dejar en blanco en celdas de la columna \textbf{Checklist} si cumplio con el ítem correspondiente.
+	\item Si un alumno supera la fecha de entrega,  su calificación será sobre la nota mínima aprobada, siempre y cuando cumpla con todos lo items.
+	\item El alumno debe autocalificarse en la columna \textbf{Estudiante} de acuerdo a la siguiente tabla:
+
+	\begin{table}[ht]
+		\caption{Niveles de desempeño}
+		\begin{center}
+		\begin{tabular}{ccccc}
 			\hline
-			\multicolumn{2}{|c|}{\textbf{\textcolor{red}{Informe}}}  \\
-			\hline 
-			\textbf{\textcolor{red}{Latex}} & \textcolor{blue}{El informe está en formato PDF desde Latex,  con un formato limpio (buena presentación) y facil de leer.}   \\ 
-			\hline 
-			
-			
+			 & \multicolumn{4}{c}{Nivel}\\
+			\cline{1-5}
+			\textbf{Puntos} & Insatisfactorio 25\%& En Proceso 50\% & Satisfactorio 75\% & Sobresaliente 100\%\\
+			\textbf{2.0}&0.5&1.0&1.5&2.0\\
+			\textbf{4.0}&1.0&2.0&3.0&4.0\\
+		\hline
 		\end{tabular}
+	\end{center}
+\end{table}	
+
+\end{itemize}
+
+\begin{table}[H]
+	\caption{Rúbrica para contenido del Informe y demostración}
+	\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+	{\renewcommand{\arraystretch}{1.5}% for the vertical padding
+	%\begin{center}
+	\begin{tabular}{|p{2.7cm}|p{7cm}|x{1.3cm}|p{1.2cm}|p{1.5cm}|p{1.1cm}|}
+		\hline
+		\multicolumn{2}{|c|}{Contenido y demostración} & Puntos & Checklist & Estudiante & Profesor\\
+		\hline
+		\textbf{1. GitHub} & Hay enlace URL activo del directorio para el  laboratorio hacia su repositorio GitHub con código fuente terminado y fácil de revisar. &2 &X &2 & \\ 
+		\hline
+		\textbf{2. Commits} &  Hay capturas de pantalla de los commits más importantes con sus explicaciones detalladas. (El profesor puede preguntar para refrendar calificación). &4 & x&3 & \\ 
+		\hline 
+		\textbf{3. Código fuente} &  Hay porciones de código fuente importantes con numeración y explicaciones detalladas de sus funciones. &2 &X &2 & \\ 
+		\hline 
+		\textbf{4. Ejecución} & Se incluyen ejecuciones/pruebas del código fuente  explicadas gradualmente. &2 &X &2 & \\ 
+		\hline			
+		\textbf{5. Pregunta} & Se responde con completitud a la pregunta formulada en la tarea.  (El profesor puede preguntar para refrendar calificación).  &2 &X &2 & \\ 
+		\hline	
+		\textbf{6. Fechas} & Las fechas de modificación del código fuente estan dentro de los plazos de fecha de entrega establecidos. &2 &X &2 & \\ 
+		\hline 
+		\textbf{7. Ortografía} & El documento no muestra errores ortográficos. &2 &X &2 & \\ 
+		\hline 
+		\textbf{8. Madurez} & El Informe muestra de manera general una evolución de la madurez del código fuente,  explicaciones puntuales pero precisas y un acabado impecable.   (El profesor puede preguntar para refrendar calificación).  &4 &x &4 & \\ 
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Total}} &20 & &19 & \\ 
+		\hline
+	\end{tabular}
+	%\end{center}
+	%\label{tab:multicol}
 	}
-	\end{table}
-	\subsection{\textcolor{red}{Rúbrica para el contenido del Informe y demostración}}
-	\begin{itemize}			
-		\item El alumno debe marcar o dejar en blanco en celdas de la columna \textbf{Checklist} si cumplio con el ítem correspondiente.
-		\item Si un alumno supera la fecha de entrega,  su calificación será sobre la nota mínima aprobada, siempre y cuando cumpla con todos lo items.
-		\item El alumno debe autocalificarse en la columna \textbf{Estudiante} de acuerdo a la siguiente tabla:
-	
-		\begin{table}[ht]
-			\caption{Niveles de desempeño}
-			\begin{center}
-			\begin{tabular}{ccccc}
-    			\hline
-    			 & \multicolumn{4}{c}{Nivel}\\
-    			\cline{1-5}
-    			\textbf{Puntos} & Insatisfactorio 25\%& En Proceso 50\% & Satisfactorio 75\% & Sobresaliente 100\%\\
-    			\textbf{2.0}&0.5&1.0&1.5&2.0\\
-    			\textbf{4.0}&1.0&2.0&3.0&4.0\\
-    		\hline
-			\end{tabular}
-		\end{center}
-	\end{table}	
-	
-	\end{itemize}
-	
-	\begin{table}[H]
-		\caption{Rúbrica para contenido del Informe y demostración}
-		\setlength{\tabcolsep}{0.5em} % for the horizontal padding
-		{\renewcommand{\arraystretch}{1.5}% for the vertical padding
-		%\begin{center}
-		\begin{tabular}{|p{2.7cm}|p{7cm}|x{1.3cm}|p{1.2cm}|p{1.5cm}|p{1.1cm}|}
-			\hline
-    		\multicolumn{2}{|c|}{Contenido y demostración} & Puntos & Checklist & Estudiante & Profesor\\
-			\hline
-			\textbf{1. GitHub} & Hay enlace URL activo del directorio para el  laboratorio hacia su repositorio GitHub con código fuente terminado y fácil de revisar. &2 &X &2 & \\ 
-			\hline
-			\textbf{2. Commits} &  Hay capturas de pantalla de los commits más importantes con sus explicaciones detalladas. (El profesor puede preguntar para refrendar calificación). &4 & x&3 & \\ 
-			\hline 
-			\textbf{3. Código fuente} &  Hay porciones de código fuente importantes con numeración y explicaciones detalladas de sus funciones. &2 &X &2 & \\ 
-			\hline 
-			\textbf{4. Ejecución} & Se incluyen ejecuciones/pruebas del código fuente  explicadas gradualmente. &2 &X &2 & \\ 
-			\hline			
-			\textbf{5. Pregunta} & Se responde con completitud a la pregunta formulada en la tarea.  (El profesor puede preguntar para refrendar calificación).  &2 &X &2 & \\ 
-			\hline	
-			\textbf{6. Fechas} & Las fechas de modificación del código fuente estan dentro de los plazos de fecha de entrega establecidos. &2 &X &2 & \\ 
-			\hline 
-			\textbf{7. Ortografía} & El documento no muestra errores ortográficos. &2 &X &2 & \\ 
-			\hline 
-			\textbf{8. Madurez} & El Informe muestra de manera general una evolución de la madurez del código fuente,  explicaciones puntuales pero precisas y un acabado impecable.   (El profesor puede preguntar para refrendar calificación).  &4 &x &4 & \\ 
-			\hline
-			\multicolumn{2}{|c|}{\textbf{Total}} &20 & &19 & \\ 
-			\hline
-		\end{tabular}
-		%\end{center}
-		%\label{tab:multicol}
-		}
-	\end{table}
-	
-\clearpage			
+\end{table}	
 
 \section{Referencias}
 \begin{itemize}			
 	\item \url{https://www.w3schools.com/python/python_reference.asp}
 	\item \url{https://docs.python.org/3/tutorial/}
 \end{itemize}	
-	
+
 %\clearpage
 %\bibliographystyle{apalike}
 %\bibliographystyle{IEEEtranN}
 %\bibliography{bibliography}
-			
+
 \end{document}

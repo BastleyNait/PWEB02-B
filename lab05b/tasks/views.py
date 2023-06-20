@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
+from .forms import TaskForm
 # Create your views here.
 
 
@@ -60,9 +61,17 @@ def iniciaSesion(request):
         if user is None:
             return render(request, 'login.html', {
                 'form': AuthenticationForm,
-                'error':"el usuario o la contraseña no existen"
+                'error': "el usuario o la contraseña no existen"
             })
         else:
             login(request, user)
             return redirect('tareas')
-    
+
+
+def crearTarea(request):
+    if request.method == 'GET':
+        return render(request, 'crearTarea.html', {
+            'form': TaskForm
+        })
+    else:
+        if:

@@ -77,7 +77,7 @@ cadenaN = rockNtB.join(knightNtN.join(bishopNtB.join(queenNtN.join(kingNtB.join(
 cadenaB = rockBtB.join(knightBtN.join(bishopBtB.join(queenBtN.join(kingBtB.join(bishopBtN.join(knightBtB.join(rockBtN)))))))
 
 """DIBUJANDO TABLERO COMPLETO"""
-draw(((cadenaN.up(peonx2N)).up(tab8x4)).up(peonx2B.up(cadenaB)))
+draw((((cadenaN.up(peonx2N)).up(tab8x4)).up(peonx2B.up(cadenaB))))
 
 
 

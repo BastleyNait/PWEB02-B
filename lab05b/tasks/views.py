@@ -1,10 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from .forms import TaskForm
+from .models import Tareas
 # Create your views here.
 
 
@@ -40,7 +41,10 @@ def registro(request):
 
 
 def tareas(request):
-    return render(request, 'tareas.html')
+    tareas = Tareas.objects.filter(user=request.user, completado__isnull=True)
+    return render(request, 'tareas.html', {
+        'tareas':tareas
+    })
 
 
 def salir(request):
@@ -74,4 +78,13 @@ def crearTarea(request):
             'form': TaskForm
         })
     else:
-        if:
+        form = TaskForm(request.POST)
+        nueva_tarea = form.save(commit=False)
+        nueva_tarea.user = request.user
+        nueva_tarea.save()
+        return redirect('tareas')
+def tareaDetalle(request, id):
+    tarea = get_object_or_404(Tareas, pk=id)
+    return render(request, 'detalle.html', {
+        'tarea': tarea
+    })

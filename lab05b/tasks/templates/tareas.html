@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
-<h1>Mis Tareas</h1>
+<h1>Mis tareas</h1>
+<ul>
+    {% for tarea in tareas %}
+        {% if tarea.importante %}
+            <a href="{% url 'detalle' tarea.id %}"><li>{{ tarea.titulo }} ❗</li></a>
+        {%else%}
+            <a href="{% url 'detalle' tarea.id %}"><li>{{ tarea.titulo }}</li></a>
+        {%endif%}
+    {% endfor %}
+</ul>
+
 {% endblock %}

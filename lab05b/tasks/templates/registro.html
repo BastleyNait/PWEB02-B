@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
 <h1>Registro</h1>
 <form method="post">
     {% csrf_token %}
@@ -7,3 +10,5 @@
     </button>
 </form>
 <h2>{{ error }}</h2>
+{% endblock %}
+

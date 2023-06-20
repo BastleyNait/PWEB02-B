@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
@@ -23,10 +23,7 @@ def registro(request):
                 user = User.objects.create_user(
                     username=request.POST['username'], password=request.POST['password1'])
                 user.save()
-                return render(request, 'registro.html', {
-                    'form': UserCreationForm,
-                    'error': 'usuario creado con exito'
-                })
+                return redirect('tareas')
             except:
                 return render(request, 'registro.html', {
                     'form': UserCreationForm,
@@ -36,3 +33,7 @@ def registro(request):
             'form': UserCreationForm,
             'error': 'las contraseñas no coiciden'
         })
+
+
+def tareas(request):
+    return render(request, 'tareas.html')

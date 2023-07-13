@@ -6,7 +6,7 @@ class Simple(models.Model):
     text = models.CharField(max_length=10)
     number = models.IntegerField(null=True)
     url = models.URLField(default='www.example.com')
-    def __str__ (self) :
+    def __str__ (self) : 
         return self.url
     
 class DateExamp1e(models.Model):
@@ -15,7 +15,7 @@ class DateExamp1e(models.Model):
 class NullExamp1e(models.Model):
     col = models.CharField(max_length=10, blank=True, null=True)
 
-"""relacion de uno a muchos en ete caso el que va ser
+"""relacion de uno a muchos en este caso el que va ser
 relacionado con varios es el modelo lenguaje"""
 
 class Lenguage(models.Model):
@@ -29,4 +29,16 @@ class Framework(models.Model):
     def __str__(self):
         return self.name 
 
+class Pelicula(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+    
+class Personaje(models.Model):
+    name = models.CharField(max_length=20)
+    peliculas = models.ManyToManyField(Pelicula)
+    def __str__(self):
+        return self.name
+        
 

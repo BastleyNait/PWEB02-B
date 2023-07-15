@@ -21,7 +21,7 @@ def correo(request):
             email=EmailMessage("Mensaje de app Django",
             "El usuario con nombre {} con la dirección {} escribe lo siguiente:\n\n {}".format(nombre, email, contenido), 
             '',
-            ["coloca_aqui_tu_email"], 
+            ["schirinosne@gmail.com"], 
             reply_to=[email])
 
             try:
